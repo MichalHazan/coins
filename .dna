@@ -1,0 +1,36 @@
+-----------Done-----------------
+1. generate componets:
+    - Header
+    - Main
+    - Coins
+    - About
+    - Favs
+    - CoinCard
+    - 404Page
+    
+2. routing:
+    /  ==> coinComp
+    /about  ==> aboutComp
+    /favs  ==> favsComp
+    /everythindElse  ==> 404Page
+
+3. data layer: (כל הנתונים)
+   -App:
+      state: coinsArr, favsArr
+      functios: getCoinsFromApi(), addToFavs(coin),delFromFavs(id)
+-----------ToDo------------------
+      jsx: <Header/>, <Drawer {favsArr.length}/>, <Main {coinsArr, favsArr , addToFavs(id),delFromFavs(id)}/>
+     
+   -Main:
+      props: coinsArr, favsArr
+      jsx: <Router><Routes><Route>
+
+   -Coins:
+      props: coinsArr, addToFavs(id),delFromFavs(id)
+      jsx: map over coinsArr and render <CoinCard {coin, addToFavs(id),delFromFavs(id)} /> for each one
+      
+   -CoinsCard:
+      props: coin, addToFavs(id),delFromFavs(id)
+      jsx: <Paper/> , <Switch/>
+
+     
